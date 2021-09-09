@@ -103,6 +103,9 @@ output "vm_memory" {
 output "vm_domain" {
   value = "${var.vm_domain}"
 }
+output "vm_count" {
+  value = "${var.vm_count}"
+}
 
 
 

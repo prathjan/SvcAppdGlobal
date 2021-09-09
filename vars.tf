@@ -111,3 +111,6 @@ variable "vm_memory" {
 variable "vm_domain" {
   type = string
 }
+variable "vm_count" {
+  type = string
+}
