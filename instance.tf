@@ -23,6 +23,7 @@ output "nbrnet" {
 }
 output "root_password" {
   value = "${var.root_password}"
+  sensitive = true
 }
 output "globalwsname" {
   value = "${var.globalwsname}"
@@ -30,14 +31,34 @@ output "globalwsname" {
 output "appname" {
   value = "${var.appname}"
 }
-output "jver" {
-  value = "${var.jver}"
+
+
+
+
+// The infra version
+output "infraver" {
+  value = "${var.infraver}"
 }
+// The machinever
+output "machinever" {
+  value = "${var.machinever}"
+}
+// The ibmver
+output "ibmver" {
+  value = "${var.ibmver}"
+}
+// The javaver
+output "javaver" {
+  value = "${var.javaver}"
+}
+
 output "clientid" {
   value = "${var.clientid}"
+  sensitive = true
 }
 output "clientsecret" {
   value = "${var.clientsecret}"
+  sensitive = true
 }
 output "url" {
   value = "${var.url}"
@@ -47,6 +68,7 @@ output "vsphere_user" {
 }
 output "vsphere_password" {
   value = "${var.vsphere_password}"
+  sensitive = true
 }
 output "vsphere_server" {
   value = "${var.vsphere_server}"
