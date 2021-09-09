@@ -54,9 +54,6 @@ output "vsphere_password" {
 output "vsphere_server" {
   value = "${var.vsphere_server}"
 }
-output "vsphere_server" {
-  value = "${var.vsphere_server}"
-}
 output "datacenter" {
   value = "${var.datacenter}"
 }
