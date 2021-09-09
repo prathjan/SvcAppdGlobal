@@ -30,9 +30,6 @@ output "globalwsname" {
 output "appname" {
   value = "${var.appname}"
 }
-output "accesskey" {
-  value = "${var.accesskey}"
-}
 output "jver" {
   value = "${var.jver}"
 }

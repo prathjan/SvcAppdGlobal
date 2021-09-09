@@ -32,10 +32,6 @@ variable "javaver" {
 variable "appname" {
   type = string
 }
-// The accesskey for appd
-variable "accesskey" {
-  type = string
-}
 
 //Details of the app wars to be installed in remot system
 variable "appwars" {
