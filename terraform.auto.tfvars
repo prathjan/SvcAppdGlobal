@@ -36,6 +36,10 @@ vm_count = 1
 vsphere_user = "administrator@vsphere.local"
 vm_memory = 4096
 
+nbrapm = 8
+nbrma = 1
+nbrsim = 1
+nbrnet = 0
 
 appwars = [
 {
