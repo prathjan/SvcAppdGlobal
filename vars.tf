@@ -66,9 +66,6 @@ variable "nbrnet" {
 variable "appport" {
   type = string
 }
-variable "globalwsname" {
-  type = string
-}
 variable "vsphere_user" {
   type = string
 }
