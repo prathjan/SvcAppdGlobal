@@ -25,9 +25,6 @@ output "root_password" {
   value = "${var.root_password}"
   sensitive = true
 }
-output "globalwsname" {
-  value = "${var.globalwsname}"
-}
 output "appname" {
   value = "${var.appname}"
 }
