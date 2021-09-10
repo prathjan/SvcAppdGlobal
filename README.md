@@ -219,48 +219,48 @@ appvmwsname - AppdInfra
 
 org - TFCB organization like "CiscoDevNet" or "Lab14"
 
-# Share variables with a Global Workspace
+### Share variables with a Global Workspace
 
 Execute the AppDGlobal TFCB workspace to setup the global variables for other workspaces. Check for a sucessful Run before progressing to the next step.
         
-# Prepping infrastructure & platform for application deployment
+### Prepping infrastructure & platform for application deployment
 
 Execute the AppdInfra TFCB workspace to set up the VM infrastructure for app hosting. Check for a sucessful Run before progressing to the next step.
 
-# Database Server Deployment
+### Database Server Deployment
 
 Execute the AppdDb TFCB workspace to set up the mysql database for the microservices. Check for a sucessful Run before progressing to the next step.
 
-# Interfacing with AppDynamics Controller API for Provisioning - Retrieve and install AppDynamics Zero Agent using AppDynamics Controller ZFI API's 
+### Interfacing with AppDynamics Controller API for Provisioning - Retrieve and install AppDynamics Zero Agent using AppDynamics Controller ZFI API's 
 
 Execute the AppdSaas TFCB workspace to retrieve ZFI download and install commands for Zero agent. Check for a sucessful Run before progressing to the next step.
 
 
-# Interfacing with AppDynamics Controller API for Provisioning - Use RBAC script to create AppDynamics User/Role/license rule and retrieve accesskey
+### Interfacing with AppDynamics Controller API for Provisioning - Use RBAC script to create AppDynamics User/Role/license rule and retrieve accesskey
 
 Execute the AppdRbac TFCB workspace to set up the AppDynamics Zero Agent on the infrastructure provisioned. Check for a sucessful Run before progressing to the next step.
 
-# Deploying App Services in a multi instance Tomcat Platform
+### Deploying App Services in a multi instance Tomcat Platform
 
 Execute the AppdApp TFCB workspace to set up multiple instances of Tomcat Application server with each hosting a single microservice.
 
-# Generate Application Load
+### Generate Application Load
 
 Execute the AppdLoad workspace to generate load for the apps deployed
 
-# View Application Insights in AppDynamics 
+### View Application Insights in AppDynamics 
 
 Checkout the application insights in AppDynamics:
 
 ![alt text](https://github.com/prathjan/images/blob/main/appd.png?raw=true)
 
-# View Application Insights in Intersight
+### View Application Insights in Intersight
 
 Checkout the infrastructure insights in Intersight:
 
 ![alt text](https://github.com/prathjan/images/blob/main/optimize.png?raw=true)
 
-# Interfacing with AppDynamics Controller API for De-provisioning - Use RBAC script to remove AppDynamics User and license rule
+### Interfacing with AppDynamics Controller API for De-provisioning - Use RBAC script to remove AppDynamics User and license rule
 
 Execute the AppdRemove workspace to remove all the entities created in AppDynamics.
 
@@ -268,7 +268,7 @@ Due to a known error, you will have to manually delete the SuperChaiStore applic
 
 ![alt text](https://github.com/prathjan/images/blob/main/appddel.png?raw=true)
             
-# Undeploy applications and deprovision infrastructure
+### Undeploy applications and deprovision infrastructure
 
 Destroy the TFCB workspaces in this order:
 
