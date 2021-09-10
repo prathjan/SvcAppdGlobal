@@ -19,7 +19,6 @@ ibmver="21.6.0.32801"
 javaver="21.5.0.32605"
 url="https://devnet.saas.appdynamics.com"
 
-globalwsname = "AppdTomcatGlobal"
 
 
 vsphere_server = "10.88.168.24"
