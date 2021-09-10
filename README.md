@@ -1,4 +1,4 @@
-# Enabling AppDynamics Business Insights for a Multi Service Java Application with Cisco Intersight Service for Terraform 
+# Enabling AppDynamics Business Insights for a legacy Java/Tomcat Multi Service Application with Cisco Intersight Service for Terraform 
 ## Contents
         Use Case
 
