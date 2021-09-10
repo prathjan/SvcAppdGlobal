@@ -82,7 +82,8 @@ You will log into your Intersight account and create the following targets. Plea
 
 ### Setting up TFCB Workspaces
 
-1. You will set up the following workspaces in TFCB and link to the VCS repos specified. 
+1. 
+You will set up the following workspaces in TFCB and link to the VCS repos specified. 
 
     AppdGlobal -> https://github.com/prathjan/SvcAppdGlobal.git
 
@@ -101,61 +102,85 @@ You will log into your Intersight account and create the following targets. Plea
     AppdRemove -> https://github.com/prathjan/SvcAppdLoad.git 
 
 
-2. You will set up the AppdGlobal workspace here. Add all the variables defined here as your TFCB workspace variables: https://github.com/prathjan/SvcAppdGlobal/blob/main/terraform.auto.tfvars
+2. 
+You will set up the AppdGlobal workspace here. Add all the variables defined here as your TFCB workspace variables: https://github.com/prathjan/SvcAppdGlobal/blob/main/terraform.auto.tfvars
 
-In addition, you will define the following. These are not included in the terraform.auto.tfvars file since its specific
+In addition, you will define the following. These are not included in the terraform.auto.tfvars file since its specific to your setup and has sensitive info:
+
 clientid - AppDynamics Controller API Client ID
+
 clientsecret - AppDynamics Controller API Client Secret
+
 root_password - Root password to access your VM's
+
 vsphere_password - vSphere administrator password
+
 mysql_pass - MySql admin password (use root/root)
 
 Please also set this workspace to share its data with other workspaces in the organization by enabling Settings->General Settings->Share State Globally.
 
-3. You will set up the AppdDb workspace here
+3. 
+You will set up the AppdDb workspace here
 Set Execution Mode as Agent and select the TF Cloud Agent that you have provisioned.Please also set this workspace to share its data with other workspaces in the organization by enabling Settings->General Settings->Share State Globally.
 
 You will set the following variables:
 
 globalwsname - AppdGlobal
+
 org - TFCB organization like "CiscoDevNet" or "Lab14"
 
-4. You will set up the AppdInfra workspace here.
+4. 
+You will set up the AppdInfra workspace here.
 
 Set Execution Mode as Agent and select the TF Cloud Agent that you have provisioned.Please also set this workspace to share its data with other workspaces in the organization by enabling Settings->General Settings->Share State Globally.
 
 You will set the following variables:
 
 globalwsname - AppdGlobal	
+
 dbvmwsname - AppdDb
+
 org - TFCB organization like "CiscoDevNet" or "Lab14"
 
-5. You will set up the AppdSaas workspace here.
+5. 
+You will set up the AppdSaas workspace here.
 
 Set Execution Mode as Remote.Please also set this workspace to share its data with other workspaces in the organization by enabling Settings->General Settings->Share State Globally.
 
 You will set the following variables:
 
-appname - ChaiStore, for example	
+appname - ChaiStore, for example
+
 javaver - java version like 21.5.0.32605	
+
 clientid - AppDynamics API Client ID	
+
 clientsecret - AppDynamics API Client Secret	
+
 zerover - AppDynamics Zero Agent version like "21.6.0.232"	
+
 infraver - AppDynamics Infra Agent version like 21.5.0.1784	
+
 machinever - AppDynamics Machine Agent version like 21.6.0.3155	
+
 ibmver - AppDynamics IBM Java Agent version 21.6.0.32801	
+
 url - AppDynamics Controller URL https://devnet.saas.appdynamics.com	
 
 
-6. You will set up the AppdRbac workspace here.
+6. 
+You will set up the AppdRbac workspace here.
 
 Set Execution Mode as Agent and select the TF Cloud Agent that you have provisioned.
 
 You will set the following variables:
 
 appvmwsname - AppdInfra	
+
 saaswsname - AppdSaas	
+
 globalwsname - AppdGlobal
+
 org - TFCB organization like "CiscoDevNet" or "Lab14"
 
 7.You will set up the AppdApp workspace here.
@@ -164,9 +189,12 @@ Set Execution Mode as Agent and select the TF Cloud Agent that you have provisio
 
 You will set the following variables:
 
-globalwsname - AppdGlobal	
+globalwsname - AppdGlobal
+
 dbvmwsname - AppdDb	
+
 appvmwsname - AppdInfra
+
 org - TFCB organization like "CiscoDevNet" or "Lab14"
 
 8. You will set up the AppdLoad workspace here.
@@ -175,8 +203,10 @@ Set Execution Mode as Agent and select the TF Cloud Agent that you have provisio
 
 You will set the following variables:
 
-globalwsname - AppdGlobal		
+globalwsname - AppdGlobal	
+
 appvmwsname - AppdInfra
+
 org - TFCB organization like "CiscoDevNet" or "Lab14"
 
 # Share variables with a Global Workspace
@@ -231,6 +261,9 @@ Due to a known error, you will have to manually delete the SuperChaiStore applic
 # Undeploy applications and deprovision infrastructure
 
 Destroy the TFCB workspaces in this order:
+
 AppdLoad
+
 AppdInfra
+
 AppdDb
