@@ -118,6 +118,7 @@ Set Execution Mode as Agent and select the TF Cloud Agent that you have provisio
 You will set the following variables:
 
 globalwsname - AppdGlobal
+org - TFCB organization like "CiscoDevNet" or "Lab14"
 
 4. You will set up the AppdInfra workspace here.
 
@@ -127,6 +128,7 @@ You will set the following variables:
 
 globalwsname - AppdGlobal	
 dbvmwsname - AppdDb
+org - TFCB organization like "CiscoDevNet" or "Lab14"
 
 5. You will set up the AppdSaas workspace here.
 
@@ -134,9 +136,16 @@ Set Execution Mode as Remote.Please also set this workspace to share its data wi
 
 You will set the following variables:
 
-globalwsname - AppdGlobal
-appvmwsname	- AppdInfra
-appname - ChaiStore, for example
+appname - ChaiStore, for example	
+javaver - java version like 21.5.0.32605	
+clientid - AppDynamics API Client ID	
+clientsecret - AppDynamics API Client Secret	
+zerover - AppDynamics Zero Agent version like "21.6.0.232"	
+infraver - AppDynamics Infra Agent version like 21.5.0.1784	
+machinever - AppDynamics Machine Agent version like 21.6.0.3155	
+ibmver - AppDynamics IBM Java Agent version 21.6.0.32801	
+url - AppDynamics Controller URL https://devnet.saas.appdynamics.com	
+
 
 6. You will set up the AppdRbac workspace here.
 
@@ -147,6 +156,7 @@ You will set the following variables:
 appvmwsname - AppdInfra	
 saaswsname - AppdSaas	
 globalwsname - AppdGlobal
+org - TFCB organization like "CiscoDevNet" or "Lab14"
 
 7.You will set up the AppdApp workspace here.
 
@@ -157,6 +167,7 @@ You will set the following variables:
 globalwsname - AppdGlobal	
 dbvmwsname - AppdDb	
 appvmwsname - AppdInfra
+org - TFCB organization like "CiscoDevNet" or "Lab14"
 
 8. You will set up the AppdLoad workspace here.
 
@@ -166,7 +177,7 @@ You will set the following variables:
 
 globalwsname - AppdGlobal		
 appvmwsname - AppdInfra
-
+org - TFCB organization like "CiscoDevNet" or "Lab14"
 
 # Share variables with a Global Workspace
 
@@ -199,15 +210,23 @@ Execute the AppdLoad workspace to generate load for the apps deployed
 
 # View Application Insights in AppDynamics 
 
-Checkout the application insights in AppDynamics.
+Checkout the application insights in AppDynamics:
+
+![alt text](https://github.com/prathjan/images/blob/main/appd.png?raw=true)
 
 # View Application Insights in Intersight
 
-Checkout the infrastructure insights in Intersight
+Checkout the infrastructure insights in Intersight:
+
+![alt text](https://github.com/prathjan/images/blob/main/optimize.png?raw=true)
 
 # Interfacing with AppDynamics Controller API for De-provisioning - Use RBAC script to remove AppDynamics User and license rule
 
-Execute the AppdRemove workspace to remove all the entities created in AppDynamics
+Execute the AppdRemove workspace to remove all the entities created in AppDynamics.
+
+Due to a known error, you will have to manually delete the SuperChaiStore application from AppDynamics to complete the cleanup:
+
+![alt text](https://github.com/prathjan/images/blob/main/appddel.png?raw=true)
             
 # Undeploy applications and deprovision infrastructure
 

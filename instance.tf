@@ -25,41 +25,6 @@ output "root_password" {
   value = "${var.root_password}"
   sensitive = true
 }
-output "appname" {
-  value = "${var.appname}"
-}
-
-
-
-
-// The infra version
-output "infraver" {
-  value = "${var.infraver}"
-}
-// The machinever
-output "machinever" {
-  value = "${var.machinever}"
-}
-// The ibmver
-output "ibmver" {
-  value = "${var.ibmver}"
-}
-// The javaver
-output "javaver" {
-  value = "${var.javaver}"
-}
-
-output "clientid" {
-  value = "${var.clientid}"
-  sensitive = true
-}
-output "clientsecret" {
-  value = "${var.clientsecret}"
-  sensitive = true
-}
-output "url" {
-  value = "${var.url}"
-}
 output "vsphere_user" {
   value = "${var.vsphere_user}"
 }
