@@ -83,6 +83,7 @@ You will log into your Intersight account and create the following targets. Plea
 ### Setting up TFCB Workspaces
 
 1. 
+
 You will set up the following workspaces in TFCB and link to the VCS repos specified. 
 
     AppdGlobal -> https://github.com/prathjan/SvcAppdGlobal.git
@@ -103,6 +104,7 @@ You will set up the following workspaces in TFCB and link to the VCS repos speci
 
 
 2. 
+
 You will set up the AppdGlobal workspace here. Add all the variables defined here as your TFCB workspace variables: https://github.com/prathjan/SvcAppdGlobal/blob/main/terraform.auto.tfvars
 
 In addition, you will define the following. These are not included in the terraform.auto.tfvars file since its specific to your setup and has sensitive info:
@@ -120,6 +122,7 @@ mysql_pass - MySql admin password (use root/root)
 Please also set this workspace to share its data with other workspaces in the organization by enabling Settings->General Settings->Share State Globally.
 
 3. 
+
 You will set up the AppdDb workspace here
 Set Execution Mode as Agent and select the TF Cloud Agent that you have provisioned.Please also set this workspace to share its data with other workspaces in the organization by enabling Settings->General Settings->Share State Globally.
 
@@ -130,6 +133,7 @@ globalwsname - AppdGlobal
 org - TFCB organization like "CiscoDevNet" or "Lab14"
 
 4. 
+
 You will set up the AppdInfra workspace here.
 
 Set Execution Mode as Agent and select the TF Cloud Agent that you have provisioned.Please also set this workspace to share its data with other workspaces in the organization by enabling Settings->General Settings->Share State Globally.
@@ -143,6 +147,7 @@ dbvmwsname - AppdDb
 org - TFCB organization like "CiscoDevNet" or "Lab14"
 
 5. 
+
 You will set up the AppdSaas workspace here.
 
 Set Execution Mode as Remote.Please also set this workspace to share its data with other workspaces in the organization by enabling Settings->General Settings->Share State Globally.
@@ -169,6 +174,7 @@ url - AppDynamics Controller URL https://devnet.saas.appdynamics.com
 
 
 6. 
+
 You will set up the AppdRbac workspace here.
 
 Set Execution Mode as Agent and select the TF Cloud Agent that you have provisioned.
@@ -183,7 +189,9 @@ globalwsname - AppdGlobal
 
 org - TFCB organization like "CiscoDevNet" or "Lab14"
 
-7.You will set up the AppdApp workspace here.
+7.
+
+You will set up the AppdApp workspace here.
 
 Set Execution Mode as Agent and select the TF Cloud Agent that you have provisioned.Please also set this workspace to share its data with other workspaces in the organization by enabling Settings->General Settings->Share State Globally.
 
@@ -197,7 +205,9 @@ appvmwsname - AppdInfra
 
 org - TFCB organization like "CiscoDevNet" or "Lab14"
 
-8. You will set up the AppdLoad workspace here.
+8. 
+
+You will set up the AppdLoad workspace here.
 
 Set Execution Mode as Agent and select the TF Cloud Agent that you have provisioned.Please also set this workspace to share its data with other workspaces in the organization by enabling Settings->General Settings->Share State Globally.
 
