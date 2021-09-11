@@ -215,6 +215,8 @@ appvmwsname - AppdInfra
 
 org - TFCB organization like "CiscoDevNet" or "Lab14"
 
+trigcount - trigger count, set to sone random number
+
 9.
 
 You will set up the AppdRemove workspace here.
@@ -255,11 +257,20 @@ Execute the AppdRbac TFCB workspace to set up the AppDynamics Zero Agent on the 
 
 ### Deploying App Services in a multi instance Tomcat Platform
 
-Execute the AppdApp TFCB workspace to set up multiple instances of Tomcat Application server with each hosting a single microservice. Retrieve the VM IP from the AppdInfra workspace Outputs. View the application at:
+Execute the AppdApp TFCB workspace to set up multiple instances of Tomcat Application server with each hosting a single microservice. Retrieve the VM IP from the AppdInfra workspace Outputs. 
+
+View the application deployment status at:
+
+http://<vm_infra_ip>:8085/tools.descartes.teastore.webui/status
+
+![alt text](https://github.com/prathjan/images/blob/main/teastatus.png?raw=true)
+
+View the application at:
 
 http://<vm_infra_ip>:8085/tools.descartes.teastore.webui/
 
 ![alt text](https://github.com/prathjan/images/blob/main/tea.png?raw=true)
+
 
 ### Generate Application Load
 
