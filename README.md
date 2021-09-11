@@ -109,10 +109,6 @@ You will set up the AppdGlobal workspace here. Add all the variables defined her
 
 In addition, you will define the following. These are not included in the terraform.auto.tfvars file since its specific to your setup and has sensitive info:
 
-clientid - AppDynamics Controller API Client ID
-
-clientsecret - AppDynamics Controller API Client Secret
-
 root_password - Root password to access your VM's
 
 vsphere_password - vSphere administrator password
