@@ -219,6 +219,23 @@ appvmwsname - AppdInfra
 
 org - TFCB organization like "CiscoDevNet" or "Lab14"
 
+9.
+
+You will set up the AppdRemove workspace here.
+
+Set Execution Mode as Agent and select the TF Cloud Agent that you have provisioned.Please also set this workspace to share its data with other workspaces in the organization by enabling Settings->General Settings->Share State Globally.
+
+You will set the following variables:
+
+globalwsname - AppdGlobal	
+
+appvmwsname - AppdInfra
+
+org - TFCB organization like "CiscoDevNet" or "Lab14"
+
+trigcount - trigger count, set to sone random number
+
+
 ### Share variables with a Global Workspace
 
 Execute the AppDGlobal TFCB workspace to setup the global variables for other workspaces. Check for a sucessful Run before progressing to the next step.
@@ -242,7 +259,11 @@ Execute the AppdRbac TFCB workspace to set up the AppDynamics Zero Agent on the 
 
 ### Deploying App Services in a multi instance Tomcat Platform
 
-Execute the AppdApp TFCB workspace to set up multiple instances of Tomcat Application server with each hosting a single microservice.
+Execute the AppdApp TFCB workspace to set up multiple instances of Tomcat Application server with each hosting a single microservice. Retrieve the VM IP from the AppdInfra workspace Outputs. View the application at:
+
+http://<vm_infra_ip>:8085/tools.descartes.teastore.webui/
+
+![alt text](https://github.com/prathjan/images/blob/main/tea.png?raw=true)
 
 ### Generate Application Load
 
