@@ -53,6 +53,8 @@
 
 4. You will need access to a vSphere infrastructure with backend compute and storage provisioned
 
+5. You will also need an account in AppDynamics SAAS Controller and should have the API Client ID and Client Secret.
+
 ### Intersight Target configuration for AppDynamics and on prem entities
 
 You will log into your Intersight account and create the following targets. Please refer to Intersight docs for details on how to create these Targets:
