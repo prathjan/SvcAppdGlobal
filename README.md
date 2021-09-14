@@ -4,25 +4,25 @@
 
         Pre-requisites
 
-        Intersight Target configuration for AppDynamics and on prem entities
+        Step 1: Intersight Target configuration for AppDynamics and on prem entities
 
-        Setting up TFCB Workspaces
+        Step 2: Setting up TFCB Workspaces
 
-        Share variables with a Global Workspace
+        Step 3: Share variables with a Global Workspace
 
-        Prepping infrastructure & platform for application deployment
+        Step 4: Prepping infrastructure & platform for application deployment
 
-        Database Server Deployment
+        Step 5: Database Server Deployment
 
         Interfacing with AppDynamics Controller API for Provisioning
 
-            Use RBAC script to create AppDynamics User and license rule
+            Step 6: Use RBAC script to create AppDynamics User and license rule
 
-            Retrieve and install AppDynamics Zero Agent using AppDynamics Controller ZFI API's 
+            Step 7: Retrieve and install AppDynamics Zero Agent using AppDynamics Controller ZFI API's 
 
-        Deploying App Services in a multi instance Tomcat Platform
+        Step 8: Deploying App Services in a multi instance Tomcat Platform
 
-        Generate Application Load
+        Step 9: Generate Application Load
 
         View Application Insights in AppDynamics and Intersight
 
@@ -55,7 +55,7 @@
 
 5. You will also need an account in AppDynamics SAAS Controller and should have the API Client ID and Client Secret.
 
-### Intersight Target configuration for AppDynamics and on prem entities
+### Step 1: Intersight Target configuration for AppDynamics and on prem entities
 
 You will log into your Intersight account and create the following targets. Please refer to Intersight docs for details on how to create these Targets:
 
@@ -82,7 +82,7 @@ You will log into your Intersight account and create the following targets. Plea
 
             archivist.terraform.io
 
-### Setting up TFCB Workspaces
+### Step 2: Setting up TFCB Workspaces
 
 1. 
 
@@ -236,28 +236,28 @@ org - TFCB organization like "CiscoDevNet" or "Lab14"
 trigcount - trigger count, set to sone random number
 
 
-### Share variables with a Global Workspace
+### Step 3: Share variables with a Global Workspace
 
 Execute the AppDGlobal TFCB workspace to setup the global variables for other workspaces. Check for a sucessful Run before progressing to the next step.
         
-### Prepping infrastructure & platform for application deployment
+### Step 4: Prepping infrastructure & platform for application deployment
 
 Execute the AppdInfra TFCB workspace to set up the VM infrastructure for app hosting. Check for a sucessful Run before progressing to the next step.
 
-### Database Server Deployment
+### Step 5: Database Server Deployment
 
 Execute the AppdDb TFCB workspace to set up the mysql database for the microservices. Check for a sucessful Run before progressing to the next step.
 
-### Interfacing with AppDynamics Controller API for Provisioning - Retrieve and install AppDynamics Zero Agent using AppDynamics Controller ZFI API's 
+### Step 6: Interfacing with AppDynamics Controller API for Provisioning - Retrieve and install AppDynamics Zero Agent using AppDynamics Controller ZFI API's 
 
 Execute the AppdSaas TFCB workspace to retrieve ZFI download and install commands for Zero agent. Check for a sucessful Run before progressing to the next step.
 
 
-### Interfacing with AppDynamics Controller API for Provisioning - Use RBAC script to create AppDynamics User/Role/license rule and retrieve accesskey
+### Step 7: Interfacing with AppDynamics Controller API for Provisioning - Use RBAC script to create AppDynamics User/Role/license rule and retrieve accesskey
 
 Execute the AppdRbac TFCB workspace to set up the AppDynamics Zero Agent on the infrastructure provisioned. Check for a sucessful Run before progressing to the next step.
 
-### Deploying App Services in a multi instance Tomcat Platform
+### Step 8: Deploying App Services in a multi instance Tomcat Platform
 
 Execute the AppdApp TFCB workspace to set up multiple instances of Tomcat Application server with each hosting a single microservice. Retrieve the VM IP from the AppdInfra workspace Outputs. 
 
@@ -274,7 +274,7 @@ http://<vm_infra_ip>:8085/tools.descartes.teastore.webui/
 ![alt text](https://github.com/prathjan/images/blob/main/tea.png?raw=true)
 
 
-### Generate Application Load
+### Step 9: Generate Application Load
 
 Execute the AppdLoad workspace to generate load for the apps deployed
 
@@ -303,6 +303,12 @@ Due to a known error, you will have to manually delete the SuperChaiStore applic
 Destroy the TFCB workspaces in this order:
 
 AppdLoad
+
+AppdRemove
+
+AppdRbac
+
+AppdSaas
 
 AppdInfra
 
