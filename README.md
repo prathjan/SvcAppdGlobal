@@ -102,7 +102,7 @@ You will set up the following workspaces in TFCB and link to the VCS repos speci
 
     AppdLoad -> https://github.com/prathjan/SvcAppdLoad.git 
 
-    AppdRemove -> https://github.com/prathjan/SvcAppdLoad.git 
+    AppdRemove -> https://github.com/prathjan/SvcAppdRemove.git 
 
 
 2. 
